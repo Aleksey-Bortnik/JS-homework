@@ -11,3 +11,10 @@ function timer(a) {
     alert("А minute has passed!");
   }, 60000);
 }
+
+function sum(array) {
+    let arrayOfNumbers = array.filter(function (el) {return typeof el === "number"});
+    let result = arrayOfNumbers.reduce(function(a, b) {return a + b});
+    return result;
+} 
+
