@@ -13,8 +13,25 @@ function timer(a) {
 }
 
 function sum(array) {
-    let arrayOfNumbers = array.filter(function (el) {return typeof el === "number"});
-    let result = arrayOfNumbers.reduce(function(a, b) {return a + b});
-    return result;
-} 
+  let arrayOfNumbers = array.filter(function (el) {
+    return typeof el === "number";
+  });
+  let result = arrayOfNumbers.reduce(function (a, b) {
+    return a + b;
+  });
+  return result;
+}
 
+function ArrayMethods() {
+  this.getLength = function (array) {
+    return array.length;
+  };
+  this.getStringsLength = function (array) {
+    return array.map(function (el) {
+      return el.length;
+    });
+  };
+  this.join = function (array) {
+    return array.join();
+  };
+}
